@@ -1,5 +1,5 @@
 # รับข้อมูลอาชีพเริ่มต้นของผู้เล่น prompt คือ "Choose a career. Start: (knight, magician, arrow): "
-career = input()
+career = input("Choose a career. Start : ")
 
 
 # กำหนดค่าพลังพื้นฐานของแต่ละอาชีพ
@@ -18,13 +18,16 @@ arrow_defend  = 75
 total_power = 0
 
 # คำนวณค่าพลังรวมโดยใช้ if / else 
-
+if career == "knight":
+    total_power = knight_attack + knight_defend
 # ถ้า career == knight 
 # ค่าพลังรวม = ค่าพลังโจมตีอัศวิน + ค่าพลังป้องกันอัศวิน
-
+elif career ==  "arrow":
+    total_power = arrow_attack + arrow_defend
 # ถ้า career == arrow 
 # ค่าพลังรวม = ค่าพลังโจมตีนักธนู + ค่าพลังป้องกันนักธนู
-
+elif career == "magician":
+     total_power = magician_attack + magician_magic
 # ถ้า career == magician
 # ค่าพลังรวม = ค่าพลังโจมตีนักเวทย์ + ค่าพลังเวทย์นักเวทย์
 
